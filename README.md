@@ -8,40 +8,28 @@ Note: I have used Visual Studio Code to build this
 # Step 1
 Create a package.json file that describes your app and its dependencies
 ![alt text](https://github.com/rajeshmuraleedharan/DockerizeNodeRestApiServer/blob/master/images/package.png)
-{
-  "name": "dockerize-node-restapi-server",
-  "version": "1.0.0",
-  "description": "Node.js on Docker",
-  "author": "Rajesh Muraleedharan",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.16.3"
-  }
-}
+
+https://github.com/rajeshmuraleedharan/DockerizeNodeRestApiServer/blob/master/package.json
 
 # Step 2
 create a server.js file that defines a web app using the Express.js framework
+![alt text](https://github.com/rajeshmuraleedharan/DockerizeNodeRestApiServer/blob/master/images/serverjs.PNG)
 
-'use strict';
+https://github.com/rajeshmuraleedharan/DockerizeNodeRestApiServer/blob/master/server.js
 
-const express = require('express');
+now you can test your fake rest api server from CMD. Open CMD window from sorce folder. 
 
-// Constants
+. Run command "npm install"
 
-const PORT = 8080;
-const HOST = '0.0.0.0';
+. Run "node server.js"
 
-// App
+browse http://localhost:8080 url from your browser or "curl -i localhost:49160" from command line.
 
-const app = express();
-app.get('/', (req, res) => {
-  res.send('Hello world\n');
-});
+# Step 3
+Create a Dockerfile
 
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+![alt text](https://github.com/rajeshmuraleedharan/DockerizeNodeRestApiServer/blob/master/images/dockerfile.PNG)
 
-Step 2
+https://github.com/rajeshmuraleedharan/DockerizeNodeRestApiServer/blob/master/Dockerfile
+
+
