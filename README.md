@@ -1,4 +1,4 @@
-# DockerizeNodeRestApiServer
+# Dockerize Node Rest Api Server
 running fake rest api server in docker using node
 
 The goal of this example is to show you how to create a REST api server using Express.Js framework into a Docker container.
