@@ -32,4 +32,23 @@ Create a Dockerfile
 
 https://github.com/rajeshmuraleedharan/DockerizeNodeRestApiServer/blob/master/Dockerfile
 
+Create a .dockerignore file
+https://github.com/rajeshmuraleedharan/DockerizeNodeRestApiServer/blob/master/.dockerignore
+
+# Step 4
+Building docker image
+docker build -t <your docker hub username>/<image name and tag>
+docker build -f Dockerfile --no-cache . -t rajeshmuraleedharan/dockerizenoderestapiserver:v1
+  
+# Step 5
+Run the image
+docker run -p 49160:8080 -d rajeshmuraleedharan/dockerizenoderestapiserver:v1
+
+Open a web browser and navigate to http://localhost:49160
+
+# Step 6 (optional)
+Push docker image to docker hub
+docker push rajeshmuraleedharan/dockerizenoderestapiserver:v1
+
+https://hub.docker.com/r/rajeshmuraleedharan/dockerizenoderestapiserver/
 
